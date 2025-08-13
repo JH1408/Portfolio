@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export const SubHeading: React.FC<{ text: string; privacy?: boolean }> = ({
   text,
@@ -6,7 +6,7 @@ export const SubHeading: React.FC<{ text: string; privacy?: boolean }> = ({
 }) => {
   return (
     <h2
-      className={`my-[30px] font-serif leading-[1.2] text-darkblue ${!privacy ? "uppercase text-center after:m-auto" : "after:ml-14"} text-[2.4rem] font-thin pb-[5px] relative after:content-[''] after:absolute after:top-[55px] after:h-[2px] after:left-0 after:right-0 mx-auto after:w-[100px] after:bg-mediumdarkblue`}
+      className={`my-[30px] font-serif leading-[1.2] text-darkblue ${!privacy ? 'uppercase text-center after:m-auto' : 'after:ml-14'} text-[2.4rem] font-thin pb-[5px] relative after:content-[''] after:absolute after:top-[55px] after:h-[2px] after:left-0 after:right-0 mx-auto after:w-[100px] after:bg-mediumdarkblue`}
     >
       {text}
     </h2>
@@ -15,17 +15,17 @@ export const SubHeading: React.FC<{ text: string; privacy?: boolean }> = ({
 
 export const Section = React.forwardRef<
   HTMLElement,
-  { children: React.ReactNode; id: string }
->(({ children, id }, ref) => {
+  { children: React.ReactNode; id: string; className?: string }
+>(({ children, id, className }, ref) => {
   return (
     <section
       ref={ref}
       id={id}
-      className="text-darkblue text-xl h-auto py-[30px] px-[40px]"
+      className={`text-darkblue text-xl h-auto py-[30px] px-[40px] ${className}`}
     >
       {children}
     </section>
   );
 });
 
-Section.displayName = "Section";
+Section.displayName = 'Section';

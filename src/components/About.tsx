@@ -1,30 +1,30 @@
-import React from "react";
-import { Section, SubHeading } from "./common";
-import JHPhoto from "../assets/JH_Photo.png";
+import React from 'react';
+import { Section, SubHeading } from './common';
+import JHPhoto from '../assets/JH_Photo.png';
 
-const About = React.forwardRef<HTMLDivElement>((_, ref) => {
+const About = ({ ref }: { ref: (node: HTMLDivElement | null) => void }) => {
   return (
-    <Section id="about" ref={ref}>
-      <SubHeading text="About Me" />
-      <div className="sm:float-left sm:pr-[40px] sm:pl-[10px]">
+    <Section id='about' ref={ref}>
+      <SubHeading text='About Me' />
+      <div className='sm:float-left sm:pr-[40px] sm:pl-[10px]'>
         <img
           src={JHPhoto}
-          alt="Josy Hartig, Software Engineer."
-          className="rounded-full max-h-[150px] max-w-[100%] mx-auto my-[30px] sm:m-0"
+          alt='Josy Hartig, Software Engineer.'
+          className='rounded-full max-h-[150px] max-w-[100%] mx-auto my-[30px] sm:m-0'
         />
       </div>
-      <div className="overflow-hidden font-light  mb-[20px] sm:mr-[20px] text-justify">
-        <p className="text-[2rem] font-light mt-0 mx-auto mb-[30px] sm:text-left text-center">
+      <div className='overflow-hidden font-light  mb-[20px] sm:mr-[20px] text-justify'>
+        <p className='text-[2rem] font-light mt-0 mx-auto mb-[30px] sm:text-left text-center'>
           Hi, I'm Josy,
         </p>
-        <p className="font-medium my-[20px]">
+        <p className='font-medium my-[20px]'>
           a self-taught Software Engineer and Engineering Manager with a passion
           for building user-centric products in fast-paced environments. I have
           a proven track record in leading high-impact projects, scaling teams,
           and collaborating closely with Product Managers and Designers to ship
           products people actually enjoy using.
         </p>
-        <p className="my-[20px]">
+        <p className='my-[20px]'>
           My journey into tech began after working as a pharmacist, where I
           realized I wanted a more flexible lifestyle. A short introductory HTML
           course sparked my love for coding and led me to make the leap into
@@ -36,12 +36,12 @@ const About = React.forwardRef<HTMLDivElement>((_, ref) => {
           make a difference while embracing new challenges and opportunities for
           growth.
         </p>
-        <p className="my-[20px]">
+        <p className='my-[20px]'>
           I love working with TypeScript and React, and I care deeply about
           building intuitive user experiences. I'm especially drawn to
           early-stage teams where I can have a tangible impact.
         </p>
-        <p className="font-medium my-[20px]">
+        <p className='font-medium my-[20px]'>
           I'm currently open to fully remote roles as a Software Engineer,
           ideally in companies focused on creative tools or productivity
           software.
@@ -49,6 +49,6 @@ const About = React.forwardRef<HTMLDivElement>((_, ref) => {
       </div>
     </Section>
   );
-});
+};
 
 export default About;

@@ -1,4 +1,4 @@
-import { useTrackVisibility } from "react-intersection-observer-hook";
+import { useTrackVisibility } from 'react-intersection-observer-hook';
 
 const useGetActiveSection = () => {
   const [aboutRef, { isVisible: isAboutSectionVisible }] = useTrackVisibility({
@@ -10,14 +10,21 @@ const useGetActiveSection = () => {
       threshold: 0.75,
     });
 
+  const [projectsRef, { isVisible: isProjectsSectionVisible }] =
+    useTrackVisibility({
+      threshold: 0.75,
+    });
+
   const activeSection = isContactSectionVisible
-    ? "contact"
+    ? 'contact'
     : isAboutSectionVisible
-      ? "about"
-      : "hero";
+      ? 'about'
+      : isProjectsSectionVisible
+        ? 'projects'
+        : 'hero';
   // there's a weird issue where you can be between about and hero and then nothing is selected
 
-  return { contactRef, aboutRef, activeSection };
+  return { contactRef, aboutRef, projectsRef, activeSection };
 };
 
 export default useGetActiveSection;

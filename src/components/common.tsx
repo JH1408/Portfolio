@@ -6,7 +6,7 @@ export const SubHeading: React.FC<{ text: string; privacy?: boolean }> = ({
 }) => {
   return (
     <h2
-      className={`my-[30px] font-serif leading-[1.2] text-darkblue ${!privacy ? 'uppercase text-center after:m-auto' : 'after:ml-14'} text-[2.4rem] font-thin pb-[5px] relative after:content-[''] after:absolute after:top-[55px] after:h-[2px] after:left-0 after:right-0 mx-auto after:w-[100px] after:bg-mediumdarkblue`}
+      className={`my-[30px] font-serif leading-[1.2] text-darkblue ${!privacy ? 'uppercase text-center after:m-auto' : 'after:ml-14'} text-[2.4rem] font-thin pb-[12px] relative after:content-[''] after:absolute after:top-full after:translate-y-[5px] after:h-[2px] after:left-0 after:right-0 mx-auto after:w-[100px] after:bg-mediumdarkblue`}
     >
       {text}
     </h2>

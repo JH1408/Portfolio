@@ -44,7 +44,7 @@ const Header: React.FC<{ activeSection?: string }> = ({ activeSection }) => {
   return (
     <>
       <div
-        className={`z-20 fixed w-full flex justify-between transition-all duration-500 ease-out ${isScrolledPastHero || isPrivacyPage ? scrollStyleNav : baseStyleNav}`}
+        className={`z-30 fixed w-full flex justify-between transition-all duration-500 ease-out ${isScrolledPastHero || isPrivacyPage ? scrollStyleNav : baseStyleNav}`}
       >
         <div onClick={() => onLinkClick('page-top')} className='z-10'>
           <img

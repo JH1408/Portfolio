@@ -3,6 +3,13 @@ import { Section, SubHeading } from './common';
 import Mora01 from '../assets/Mora_01.png';
 import Mora04 from '../assets/Mora_04.png';
 
+const features = [
+  'Handwriting support for practicing non-Latin scripts and phonetic spelling.',
+  'Native browser text to speech.',
+  'Spaced repetition with front-to-back and back-to-front study modes to maximize retention.',
+  'Import vocabulary from CSV files and export your decks anytime for backup or sharing.',
+];
+
 const Projects = ({ ref }: { ref: (node: HTMLDivElement | null) => void }) => {
   return (
     <Section id='projects' className='bg-lightblue' ref={ref}>
@@ -48,17 +55,9 @@ const Projects = ({ ref }: { ref: (node: HTMLDivElement | null) => void }) => {
               Key Features
             </h4>
             <ul className='space-y-[10px]'>
-              <li className='flex items-start'>
-                • Handwriting support for practicing non-Latin scripts and
-                phonetic spelling.
-              </li>
-              <li className='flex items-start'>
-                • Native browser text to speech.
-              </li>
-              <li className='flex items-start'>
-                • Spaced repetition with front-to-back and back-to-front study
-                modes to maximize retention.
-              </li>
+              {features.map((feature) => (
+                <li className='flex items-start'>• {feature}</li>
+              ))}
             </ul>
           </div>
 

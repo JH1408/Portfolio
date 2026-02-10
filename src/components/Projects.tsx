@@ -4,10 +4,12 @@ import Mora01 from '../assets/Mora_01.png';
 import Mora04 from '../assets/Mora_04.png';
 
 const features = [
-  'Handwriting support for practicing non-Latin scripts and phonetic spelling.',
-  'Native browser text to speech.',
-  'Spaced repetition with front-to-back and back-to-front study modes to maximize retention.',
-  'Import vocabulary from CSV files and export your decks anytime for backup or sharing.',
+  'Handwriting and stylus input for practicing non-Latin scripts and phonetic transcription.',
+  'Typing-based recall mode with automatic grading and tolerance for minor errors.',
+  'Browser-based text-to-speech for pronunciation practice.',
+  'Custom spaced repetition system with multiple study directions (front-to-back, back-to-front).',
+  'Optional email reminders and timezone-aware scheduling.',
+  'CSV import/export for bulk deck management and data portability.',
 ];
 
 const Projects = ({ ref }: { ref: (node: HTMLDivElement | null) => void }) => {
@@ -65,7 +67,7 @@ const Projects = ({ ref }: { ref: (node: HTMLDivElement | null) => void }) => {
             <h4 className='font-medium text-darkblue mb-[10px]'>Tech Stack</h4>
             <p>
               TypeScript, Next.js, Tailwind, TanStack Query, Prisma, PostgreSQL,
-              Vercel, Neon.
+              Inngest, Vercel, Neon.
             </p>
           </div>
         </div>
